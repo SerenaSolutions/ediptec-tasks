@@ -3,7 +3,7 @@
 Portfólio determinístico de **1.000 tarefas** de resolução de problemas em
 química, física, astronomia, astroquímica (moléculas espaciais), química
 quântica, física quântica, física espacial, matemática, álgebra e lógica —
-destinado à resolução assistida por IA (**Isaac**, com apoio do laboratório
+destinado à resolução assistida por IA (**ZYKL**, com apoio do laboratório
 BM/IBM) e à verificação automatizada.
 
 ## Domínios e contagens
@@ -32,7 +32,7 @@ tests/test_tasks.py            # âncoras canônicas + schema + verificação
 .github/workflows/ci.yml       # CI: determinismo + testes
 ```
 
-## Como o Isaac resolve
+## Como o ZYKL resolve
 
 Cada tarefa é um objeto JSON:
 
@@ -55,12 +55,12 @@ Cada tarefa é um objeto JSON:
 **Ciclo de vida (governança de estados):**
 
 1. `PENDENTE` — tarefa publicada, aguardando solução.
-2. `RESOLVIDA` — o Isaac resolve, registra o valor obtido e seu método
+2. `RESOLVIDA` — o ZYKL resolve, registra o valor obtido e seu método
    (campo `solver_result`), e muda `status` para `RESOLVIDA` via PR.
 3. `VERIFICADA` — a suíte confere o resultado contra a resposta de referência
    (tolerância relativa 0,5%) e as âncoras canônicas; CI sela o estado.
 
-Regra de ouro: **não fabricar resultados**. Se o Isaac não conseguir resolver,
+Regra de ouro: **não fabricar resultados**. Se o ZYKL não conseguir resolver,
 o estado correto é manter `PENDENTE` e registrar a dificuldade.
 
 ## Verificação (o que a suíte garante)

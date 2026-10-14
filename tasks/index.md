@@ -14,7 +14,7 @@ Gerado por `generator/generate_tasks.py` (seed 20261014). Total: **1000 tarefas*
 
 Dificuldade: INTERMEDIARIO: 400, AVANCADO: 320, ESPECIALISTA: 280
 
-Ciclo de vida de cada tarefa: `PENDENTE` → `RESOLVIDA` (Isaac) → `VERIFICADA` (suíte).
+Ciclo de vida de cada tarefa: `PENDENTE` → `RESOLVIDA` (ZYKL) → `VERIFICADA` (suíte).
 
 ### Exemplo
 ```json

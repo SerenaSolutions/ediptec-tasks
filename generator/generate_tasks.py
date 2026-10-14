@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 EDIPTEC — Gerador deterministico do portfolio de 1.000 tarefas cientificas
-verificaveis para resolucao assistida (Isaac / laboratorio BM-IBM).
+verificaveis para resolucao assistida (ZYKL / laboratorio BM-IBM).
 
 Dominios: quimica quantica, fisica quantica, astronomia, astroquimica
 (moleculas espaciais), quimica, fisica espacial, matematica/algebra/logica.
@@ -898,7 +898,7 @@ def generate(out_root):
         lines.append("| %s | %d |" % (dom, cnt))
     diffs = ["INTERMEDIARIO", "AVANCADO", "ESPECIALISTA"]
     lines += ["", "Dificuldade: " + ", ".join("%s: %d" % (d, sum(1 for t in tasks if t["difficulty"] == d)) for d in diffs)]
-    lines += ["", "Ciclo de vida de cada tarefa: `PENDENTE` → `RESOLVIDA` (Isaac) → `VERIFICADA` (suíte).", ""]
+    lines += ["", "Ciclo de vida de cada tarefa: `PENDENTE` → `RESOLVIDA` (ZYKL) → `VERIFICADA` (suíte).", ""]
     lines.append("### Exemplo")
     lines.append("```json")
     lines.append(json.dumps(tasks[0], ensure_ascii=False, indent=2))
