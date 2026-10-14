@@ -1,0 +1,14 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Determinismo do gerador
+        run: python generator/generate_tasks.py --check
+      - name: Suite de testes (ancoras + schema + verificacao)
+        run: python tests/test_tasks.py
